@@ -1,0 +1,246 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #ff9800;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    margin: 30px;
+    background: rgba(43, 42, 42, 0.869);
+    border-radius: 10px;
+}
+
+.category-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.category-header button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(11, 11, 11);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    color: #ff9800;
+    background: rgb(32, 32, 32);
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background: #333;
+    color: #fff;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+select {
+    width: 106%;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+select:focus {
+    border: 1px solid #ff9800;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.7);
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff9800;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin: 5px;
+    width: fit-content;
+}
+
+.complete,
+.edit,
+.remove {
+    padding: 12px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff4f00;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e68900;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.5);
+}
+
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.fab:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+li {
+    width: calc(50% - 10px);
+    margin: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    transition: background 0.3s;
+}
+
+@media (max-width: 600px) {
+    li {
+        width: 100%;
+    }
+}
+
+.high-priority {
+    background: #ff4500;
+}
+
+.medium-priority {
+    background: #ff5e0e;
+    color: black;
+}
+
+.low-priority {
+    background: #f5761a;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.task-title {
+    font-size: 2em;
+}
+
+.task-description {
+    font-size: 1.5em;
+}
+
+.due {
+    font-size: 1em;
+}
+
+.task-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.completed-tasks {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ff9800;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.completed-title {
+    color: #ff9800;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .fab {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+.overdue {
+    background: rgb(236, 2, 2) !important;
+}
